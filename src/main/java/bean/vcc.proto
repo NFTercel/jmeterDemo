@@ -1,0 +1,31 @@
+option java_package = "com.nearme.vc.bean";   
+option java_outer_classname = "VcCardRechargeBean";   
+option optimize_for=SPEED;  
+message VcCardRecharReq
+{
+optional  string sign=1;
+optional  bytes body=2;
+} 
+message VcCardRechargeRes
+{
+optional  string resultCode=1;
+optional  string resultMsg=2;
+}
+
+message VcCardRecharReqBody
+{
+optional  string accessToken=1;
+optional  string tokenSecret=2;
+optional  string cardId=3;
+optional  string cardPwd=4;
+optional  string imei=5;
+optional  string model=6;
+optional  string appPackage=7;
+optional  string partnerId=8;
+optional  string source=9;
+optional  string type=10;
+optional  string barCode=11;
+optional  string ver=12;
+
+
+} 

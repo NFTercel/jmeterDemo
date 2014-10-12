@@ -1,0 +1,17 @@
+*.class
+*.log
+*.iml
+*.classpath
+*.DS_Store
+*.project
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.exe
+.idea/
+lib/
+target/
+*.ipr
+*.iws
