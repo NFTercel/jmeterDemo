@@ -327,9 +327,9 @@ public class RsaUtil {
         return data;
     }*/
 
-   /* public static String encryptByPublicKey(String content, String key) throws Exception {
+    public static String encryptByPublicKey(String content, String key) throws Exception {
         // 对公钥解密
-        byte[] keyBytes = com.nearme.platform.common.security.Base64.base64Decode(key);
+        byte[] keyBytes = org.apache.commons.codec.binary.Base64.decodeBase64(key);
 
         // 取得公钥
         X509EncodedKeySpec x509KeySpec = new X509EncodedKeySpec(keyBytes);
@@ -362,8 +362,8 @@ public class RsaUtil {
             writer.write(cipher.doFinal(block));
         }
 
-        return com.nearme.platform.common.security.Base64.base64Encode(writer.toByteArray());
-    }*/
+        return org.apache.commons.codec.binary.Base64.encodeBase64String(writer.toByteArray());
+    }
 
     public static byte[] encryptByPublicKey(byte[] content, String key) throws Exception {
         // 对公钥解密

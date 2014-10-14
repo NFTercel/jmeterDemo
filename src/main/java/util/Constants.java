@@ -9,10 +9,14 @@ public class Constants {
 
     public static final String pubKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDpgSW5VkZ6/xvh+wMXezrOokNdiupuvuMj4RVJy44byWDupl4H37z907A26RVdFzMeyLUQB4rsDIaXdxCODlljWW+/K96uF5MsDtOFUBw7VlOclIjcYTv/YDQEul8JoXoOuy1Yf3b5sbTpTuVTcl97tAuLJ8PoGe2K7N3B1eUQqQIDAQAB";
 
-
     public static final String partnerId = "2031";
 
     public static final String accessToken = "TOKEN_1/vvqfDFg6IV7Oghew40pKwPTc7acboAvq1j1fk1WC2E+TgqVl5btQ==";
+
+    public static final String kbServer_parterId = "2030";
+
+    public static final String payPubKey = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKHFBFPPzPMdDI6N6xSy7aNW2CauiwpsrOB86hpisS30eOYeFJCC5b1Z2PlKFYblWDCuG51M1O2hl/eriB3vb2j3EPN8jdzkprMLwMzERbQ57N+ZEINXoCRHGWvIW+oznI2hB48sq8W6oR5hK2lJAZnzna6waI6Z/+Dsx0sl20HRAgMBAAECgYAMc1Fl8fRgMbgpsJqLOUo47BIux/hDkSGtFXAfH8FrPAmiDGagyLJN5IBij2UgwL4M4RmW/bbVoz5C/Zy4URlN54CUr3CGYPOv132gnD5m704POv+sHsRipYbYRjc9CCS+9OtxC3p8TI79/0Mfxwrqrl+YYX3AyaIf/8oTFFyMkQJBANBf9Iut1HErWssbpXs3TnQh+jZrlDdffdm7O1iJUingkDevOf11V3JoslgV8s0TNa58yY92MQYHoxxV78qentsCQQDGvi6l5tfbHesSsIRfpA9nvzISGoYLUQW/G05t0TYDjb+cYfpKCMOYplNbP1UUderNcCIuPMF95Xs662zlGhPDAkBHPJa47euT6PN4PnJbZnP+xeLpmeuo5o960USfpwqc4HXNY61aljQYG+zkqlRAgdG3Xlf2ILzvx8qelE6PIZ1DAkEAvEr1ETM7MRsQWz2nvKFIAygO/T3p35Dc2+m4Da1X+lfywOvG4RuajOaQNPQ03FS3p/nkOGBRhcDEVtcz7X8eVwJAf242y2LV39RJtGKW9XgoUcIIssoDwXwr9gqdUbQMmTpSpo7cdZhkvU8yEKZAx9r+2GSxs7wYIaBy7rv4GuDh+Q==";
+
 
 
 }

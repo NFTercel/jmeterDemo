@@ -193,11 +193,19 @@ public class HttpConnectUtil {
 		if(null == client) {
 			client = HttpConnectManager.getHttpClient();
 		}
-		
+
+        if (null == client) {
+            throw new NullPointerException("fail to get client from http pool");
+        }
+
 		InputStream is = null;
 		try {
+
 			HttpResponse response = client.execute(request);
-			HttpEntity entity = response.getEntity();
+            if (null == response) {
+                throw new NullPointerException("fail to get http response");
+            }
+            HttpEntity entity = response.getEntity();
 			if (null != entity) {
 				is = entity.getContent();
 			}
@@ -207,6 +215,7 @@ public class HttpConnectUtil {
 					return getData(is, (int)entity.getContentLength());
 				}
 			} else {
+                System.out.println("http code : {}" + response.getStatusLine());
 				request.abort();
 			}
 		} catch(Exception ex) {
@@ -214,7 +223,9 @@ public class HttpConnectUtil {
 			throw ex;
 		} finally {
 //			FileOperate.close(is);
-            is.close();
+            if (is != null) {
+                is.close();
+            }
 		}
 		
 		return null;

@@ -92,17 +92,17 @@ public class HttpConnectManager {
 
 		// 设置连接管理器
 		connectionManager = new ThreadSafeClientConnManager(schemeRegistry);
-		int maxTotal = NumericUtil.parseInt(System.getProperty(HTTP_MAX_TOTAL_CONNECTIONS), MAX_TOTAL_CONNECTIONS);
+		int maxTotal = MAX_TOTAL_CONNECTIONS;
 		connectionManager.setMaxTotal(maxTotal);
-		int maxRoute = NumericUtil.parseInt(System.getProperty(HTTP_MAX_ROUTE_CONNECTIONS), MAX_ROUTE_CONNECTIONS);
+		int maxRoute = MAX_ROUTE_CONNECTIONS;
 		connectionManager.setDefaultMaxPerRoute(maxRoute);
 
 		httpParams = new BasicHttpParams();
 		// 设置连接超时时间
-		int connectTimeout = NumericUtil.parseInt(System.getProperty(HTTP_CONNECT_TIMEOUT), CONNECT_TIMEOUT);
+		int connectTimeout = CONNECT_TIMEOUT;
 		HttpConnectionParams.setConnectionTimeout(httpParams, connectTimeout);
 		// 设置读取超时时间
-		int readTimeout = NumericUtil.parseInt(System.getProperty(HTTP_READ_TIMEOUT), READ_TIMEOUT);
+		int readTimeout = READ_TIMEOUT;
 		HttpConnectionParams.setSoTimeout(httpParams, readTimeout);
 
 		defaultHttpClient = new DefaultHttpClient(connectionManager, httpParams);
